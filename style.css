@@ -1,0 +1,139 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0a397f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+.container {
+    width:450px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.container h2 {
+    font-weight: 600;
+    font-size: 1.31rem;
+    padding: 1rem 1.175rem;
+    border-bottom: 1px solid #d4dbe5;
+}
+.wrapper {
+    margin: 1.25rem 1.75rem;
+}
+.wrapper .input-box {
+    position: relative;
+}
+.input-box input {
+    width: 100%;
+    height: 53px;
+    color: #222;
+    background: none;
+    outline: none;
+    font-size: 1.06rem;
+    font-weight: 500;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0 2.85rem 0 1rem;
+}
+.input-box i {
+    position: absolute;
+    right: 13px;
+    margin-top: 18.5px;
+    cursor: pointer;
+    color: #707070;
+}
+.wrapper .pass-indicator {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    background-color: #dfdfdf;
+    margin-top: .75rem;
+    border-radius: 25px;
+}
+.wrapper .pass-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    background-color: #f1c80b;
+}
+.pass-indicator#weak::before{
+    width: 20%;
+    background: #E64A4A;
+}
+.pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+}
+.pass-indicator#strong::before{
+    width: 100%;
+    background: #4285F4;
+}
+.wrapper .pass-length {
+    margin: 1.56rem 0 1.25rem;
+}
+.pass-length .details {
+    display: flex;
+    justify-content: space-between;
+}
+.pass-length input {
+    width: 100%;
+    height: 15px;
+}
+.pass-settings .options {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.pass-settings .options .option {
+    display: flex;
+    align-items: center;
+    width: calc(100% / 2);
+    margin-bottom: 1rem;
+}
+.options .option:first-child{
+    pointer-events: none;
+}
+.options .option:first-child input{
+    opacity: 0.7;
+}
+.options .option input {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.options .option label {
+    cursor: pointer;
+    padding-left: .63rem;
+}
+.wrapper .generate-btn {
+    width: 100%;
+    color: #fff;
+    background-color: #3670cc;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.06rem;
+    padding: 0.94rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+@media (max-width:767px) {
+    .container {
+        margin: 0 10px;
+    }
+}
